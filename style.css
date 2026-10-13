@@ -1,0 +1,22 @@
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html, body { height: 100%; }
+body { display: flex; flex-direction: column; font-family: system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
+  background: #111; color: #eee; }
+header { display: flex; flex-wrap: wrap; gap: 12px; justify-content: space-between; align-items: center; padding: 14px 20px; }
+h1 { font-size: 1.3rem; }
+.controls { display: flex; gap: 8px; flex-wrap: wrap; }
+select, button { font: inherit; font-size: .9rem; border-radius: 8px; padding: 8px 14px; border: 1px solid #333;
+  background: #fff; color: #111; cursor: pointer; font-weight: 600; }
+.ghost { background: transparent; color: #eee; }
+kbd { font-size: .72rem; border: 1px solid #aaa; border-radius: 4px; padding: 1px 5px; margin-left: 4px; font-weight: 500; }
+main { flex: 1; display: flex; min-height: 420px; }
+.swatch { flex: 1; display: flex; flex-direction: column; justify-content: flex-end; align-items: center;
+  padding: 28px 8px; cursor: pointer; transition: flex .2s; position: relative; }
+.swatch:hover { flex: 1.25; }
+.hex { font-size: clamp(1rem, 2.4vw, 1.8rem); font-weight: 800; letter-spacing: .5px; font-family: ui-monospace, Consolas, monospace; }
+.meta { font-size: .78rem; opacity: .85; margin-top: 6px; text-align: center; }
+.lock { position: absolute; top: 18px; background: rgba(255,255,255,.25); border: none; font-size: 1.3rem; padding: 6px 10px; }
+footer { padding: 10px 20px; font-size: .8rem; color: #999; }
+#toast { color: #4ade80; font-weight: 600; }
+@media (max-width: 640px) { main { flex-direction: column; } .swatch { padding: 16px; } .lock { top: auto; right: 12px; bottom: 14px; } }
+.lock.on { background: rgba(0,0,0,.55); color: #fff; font-size: .95rem; font-weight: 700; padding: 8px 12px; }

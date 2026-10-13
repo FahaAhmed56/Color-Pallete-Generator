@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Palette – Color Palette Generator</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <h1>🎨 Palette</h1>
+    <div class="controls">
+      <select id="mode" aria-label="Harmony">
+        <option value="analogous">Analogous</option>
+        <option value="complementary">Complementary</option>
+        <option value="triadic">Triadic</option>
+        <option value="monochrome">Monochrome</option>
+      </select>
+      <button id="gen">Generate <kbd>Space</kbd></button>
+      <button id="export" class="ghost">Copy as CSS</button>
+    </div>
+  </header>
+  <main id="palette"></main>
+  <footer>Click a color to copy its hex · 🔓 lock colors you like · <span id="toast"></span></footer>
+  <script src="color.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
